@@ -7,9 +7,9 @@ def valid_move?(board, index)
   if(index > 0 && index <10)
     arr_index = index - 1
     if position_taken?(board, arr_index)
-       return true
+       return false
     else
-      return false
+      return true
     end
   else
     return false
@@ -19,7 +19,7 @@ end
 def position_taken?(board, index)
   if(board[index] == " " || board[index] == "" || board[index] == nil)
     return false
-  else(board[index] == "X" || board[index] == "O")
+  elsif(board[index] == "X" || board[index] == "O")
     return true
   end
 end
